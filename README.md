@@ -80,6 +80,8 @@ phaedrus@q.local: ~/gits/messaging-api
 * Connection #1 to host localhost left intact
 ```
 
+Post to the /send/email endpoint to send email:
+
 ```bash
 phaedrus@q.local: ~/gits/cw-messaging-api
  [ Exit: 0 ] [ last: 492ms ]$ curl -vvvv POST http://localhost:8080/send/email -H "Content-Type: application/json" -d '{"to": "marc.bittner@gmail.c om","subject": "Sendgrid Test Email","body": "Sendgrid Test Email"}'
