@@ -148,8 +148,7 @@ func (s *Server) handleSMS(c echo.Context) error {
 
 	sec, err := getSecrets()
 	if err != nil {
-		// likely forgot to set env var
-		// make this not invisible
+		// don't screw up envars
 		s.logger.Errorw("failed to acquire secrets.", "error", err)
 	}
 
